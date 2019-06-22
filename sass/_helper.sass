@@ -1,3 +1,5 @@
+body, html
+    height: auto!important
 .ukit
     &-main
         display: flex
@@ -7,6 +9,7 @@
         width: 100%
         padding-left: 250px
         flex-grow: 1
+        background: #f3f3f3
     
 //ASIDE
 .ukit-aside
@@ -41,8 +44,7 @@
                 &:hover
                     color: var(--primary)
                     border-left: 4px solid var(--primary)
-            &.active
-                a
+                &.active
                     color: var(--primary)
                     border-left: 4px solid var(--primary)
 //HEADER
@@ -101,12 +103,18 @@
                     border-style: dashed
 
     &-wrapper
+        width: 100%
+        background: #fff
+        padding: 0 15px
         padding-top: 65px
-        width: 80%
         margin: 0 auto
+        transition: 0.4s width cubic-bezier(0.37,0.62,0.47,0.72)
     &-section
         color: #000
         padding: 75px 0
+        width: 100%
+        max-width: 80%
+        margin: 0 auto
         border-bottom: 1px solid #eee
         font-family: "Roboto"
         &__title
@@ -115,7 +123,8 @@
             font-size: 30px
             color: #000
         &__article
-            margin-bottom: 50px
+            &:not(:last-of-type)
+                margin-bottom: 50px
             h3
                 text-transform: uppercase
                 color: #999
@@ -177,7 +186,7 @@
                         background: #a6a9af
                     &--heather
                         background: #bcbfc2
-                    &--zoomthor
+                    &--zumthor
                         background: #d2d4d6
                     &--zirkon
                         background: #e9eaeb

@@ -1,3 +1,7 @@
+body, html {
+  height: auto !important;
+}
+
 .ukit-main {
   display: flex;
   height: 100%;
@@ -8,6 +12,7 @@
   width: 100%;
   padding-left: 250px;
   flex-grow: 1;
+  background: #f3f3f3;
 }
 
 .ukit-aside {
@@ -50,7 +55,7 @@
   border-left: 4px solid var(--primary);
 }
 
-.ukit-aside__list-item.active a {
+.ukit-aside__list-item a.active {
   color: var(--primary);
   border-left: 4px solid var(--primary);
 }
@@ -130,14 +135,20 @@
 }
 
 .ukit-wrapper {
+  width: 100%;
+  background: #fff;
+  padding: 0 15px;
   padding-top: 65px;
-  width: 80%;
   margin: 0 auto;
+  transition: 0.4s width cubic-bezier(0.37, 0.62, 0.47, 0.72);
 }
 
 .ukit-section {
   color: #000;
   padding: 75px 0;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
   border-bottom: 1px solid #eee;
   font-family: "Roboto";
 }
@@ -149,7 +160,7 @@
   color: #000;
 }
 
-.ukit-section__article {
+.ukit-section__article:not(:last-of-type) {
   margin-bottom: 50px;
 }
 
@@ -259,7 +270,7 @@
   background: #bcbfc2;
 }
 
-.ukit-colorlist li i.ukit-color--zoomthor {
+.ukit-colorlist li i.ukit-color--zumthor {
   background: #d2d4d6;
 }
 
@@ -626,7 +637,7 @@ input[type='radio']:checked::before {
   color: #bcbfc2 !important;
 }
 
-.ukit-color--zoomthor {
+.ukit-color--zumthor {
   color: #d2d4d6 !important;
 }
 
