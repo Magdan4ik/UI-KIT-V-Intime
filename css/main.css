@@ -2,12 +2,12 @@ body, html {
   height: auto !important;
 }
 
-.ukit-main {
+.uk-main {
   display: flex;
   height: 100%;
 }
 
-.ukit-content {
+.uk-content {
   position: relative;
   width: 100%;
   padding-left: 250px;
@@ -15,7 +15,7 @@ body, html {
   background: #f3f3f3;
 }
 
-.ukit-aside {
+.uk-aside {
   flex-shrink: 0;
   width: 250px;
   height: 100%;
@@ -26,17 +26,17 @@ body, html {
   border-right: 1px solid #eee;
 }
 
-.ukit-aside__logo {
+.uk-aside__logo {
   display: block;
   border-bottom: 1px solid #eeeeee;
 }
 
-.ukit-aside__list {
+.uk-aside__list {
   margin: 0;
   padding-top: 45px;
 }
 
-.ukit-aside__list-item a {
+.uk-aside__list-item a {
   display: block;
   padding: 12px 16px 12px 29px;
   color: #777;
@@ -50,17 +50,17 @@ body, html {
   transition: all 0.4s ease;
 }
 
-.ukit-aside__list-item a:hover {
+.uk-aside__list-item a:hover {
   color: var(--primary);
   border-left: 4px solid var(--primary);
 }
 
-.ukit-aside__list-item a.active {
+.uk-aside__list-item a.active {
   color: var(--primary);
   border-left: 4px solid var(--primary);
 }
 
-.ukit-header {
+.uk-header {
   background: #fff;
   display: block;
   position: fixed;
@@ -74,7 +74,7 @@ body, html {
   font-family: 'Roboto', sans-serif;
 }
 
-.ukit-header__inner {
+.uk-header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,30 +82,30 @@ body, html {
   padding: 0 30px;
 }
 
-.ukit-header__copyright {
+.uk-header__copyright {
   font-size: 14px;
 }
 
-.ukit-header__breakpoints {
+.uk-header__breakpoints {
   display: flex;
   align-items: center;
   margin: 0;
 }
 
-.ukit-header__breakpoint:not(:last-of-type) {
+.uk-header__breakpoint:not(:last-of-type) {
   margin-right: 20px;
 }
 
-.ukit-header__breakpoint-link {
+.uk-header__breakpoint-link {
   display: flex;
   align-items: center;
 }
 
-.ukit-header__breakpoint-link:hover::before {
+.uk-header__breakpoint-link:hover::before {
   border-color: var(--primary);
 }
 
-.ukit-header__breakpoint-link::before {
+.uk-header__breakpoint-link::before {
   content: "";
   margin-right: 5px;
   border-radius: 5px;
@@ -113,28 +113,28 @@ body, html {
   flex-shrink: 0;
 }
 
-.ukit-header__breakpoint-link--small::before {
+.uk-header__breakpoint-link--small::before {
   width: 17px;
   height: 25px;
 }
 
-.ukit-header__breakpoint-link--medium::before {
+.uk-header__breakpoint-link--medium::before {
   width: 25px;
   height: 35px;
 }
 
-.ukit-header__breakpoint-link--large::before {
+.uk-header__breakpoint-link--large::before {
   width: 45px;
   height: 35px;
 }
 
-.ukit-header__breakpoint-link--full::before {
+.uk-header__breakpoint-link--full::before {
   width: 50px;
   height: 40px;
   border-style: dashed;
 }
 
-.ukit-wrapper {
+.uk-wrapper {
   width: 100%;
   background: #fff;
   padding: 0 15px;
@@ -143,7 +143,7 @@ body, html {
   transition: 0.4s width cubic-bezier(0.37, 0.62, 0.47, 0.72);
 }
 
-.ukit-section {
+.uk-section {
   color: #000;
   padding: 75px 0;
   width: 100%;
@@ -153,18 +153,19 @@ body, html {
   font-family: "Roboto";
 }
 
-.ukit-section__title {
+.uk-section__title {
   margin-bottom: 45px;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 36px;
   color: #000;
+  text-transform: uppercase;
 }
 
-.ukit-section__article:not(:last-of-type) {
+.uk-section__article:not(:last-of-type) {
   margin-bottom: 50px;
 }
 
-.ukit-section__article h3 {
+.uk-section__article > h3 {
   text-transform: uppercase;
   color: #999;
   font-size: 16px;
@@ -172,20 +173,24 @@ body, html {
   margin-bottom: 25px;
 }
 
-.ukit-colorlist {
+.uk-colorlist {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-.ukit-colorlist li {
+.uk-colorlist li {
   margin: 20px;
   display: flex;
   flex-basis: calc(30% - 20px);
   min-width: 320px;
 }
 
-.ukit-colorlist li i {
+.uk-colorlist li p {
+  margin: 0;
+}
+
+.uk-colorlist li i {
   width: 70px;
   height: 70px;
   margin-right: 15px;
@@ -194,96 +199,137 @@ body, html {
   flex-shrink: 0;
 }
 
-.ukit-colorlist li i.ukit-color--rpurp {
+.uk-colorlist li i.uk-color--rpurp {
   background: #6749af;
 }
 
-.ukit-colorlist li i.ukit-color--midblue {
+.uk-colorlist li i.uk-color--midblue {
   background: #310a7f;
 }
 
-.ukit-colorlist li i.ukit-color--evour {
+.uk-colorlist li i.uk-color--evour {
   background: #441e92;
 }
 
-.ukit-colorlist li i.ukit-color--fsblue {
+.uk-colorlist li i.uk-color--fsblue {
   background: #58389f;
 }
 
-.ukit-colorlist li i.ukit-color--fsblue2 {
+.uk-colorlist li i.uk-color--fsblue2 {
   background: #6e52ab;
 }
 
-.ukit-colorlist li i.ukit-color--rblue {
+.uk-colorlist li i.uk-color--rblue {
   background: #826ab7;
 }
 
-.ukit-colorlist li i.ukit-color--cornblue {
+.uk-colorlist li i.uk-color--cornblue {
   background: #9784c4;
 }
 
-.ukit-colorlist li i.ukit-color--skyblue {
+.uk-colorlist li i.uk-color--skyblue {
   background: #c0b5dc;
 }
 
-.ukit-colorlist li i.ukit-color--lavender {
+.uk-colorlist li i.uk-color--lavender {
   background: #d6cee7;
 }
 
-.ukit-colorlist li i.ukit-color--aliceblue {
+.uk-colorlist li i.uk-color--aliceblue {
   background: #eae7f3;
 }
 
-.ukit-colorlist li i.ukit-color--midexp {
+.uk-colorlist li i.uk-color--midexp {
   background: #202834;
 }
 
-.ukit-colorlist li i.ukit-color--manatee {
+.uk-colorlist li i.uk-color--manatee {
   background: #90949b;
 }
 
-.ukit-colorlist li i.ukit-color--arsenic {
+.uk-colorlist li i.uk-color--arsenic {
   background: #363e49;
 }
 
-.ukit-colorlist li i.ukit-color--fiord {
+.uk-colorlist li i.uk-color--fiord {
   background: #4d535e;
 }
 
-.ukit-colorlist li i.ukit-color--shutgrey {
+.uk-colorlist li i.uk-color--shutgrey {
   background: #636972;
 }
 
-.ukit-colorlist li i.ukit-color--stormgrey {
+.uk-colorlist li i.uk-color--stormgrey {
   background: #797e86;
 }
 
-.ukit-colorlist li i.ukit-color--manatee {
+.uk-colorlist li i.uk-color--manatee {
   background: #90949b;
 }
 
-.ukit-colorlist li i.ukit-color--mischka {
+.uk-colorlist li i.uk-color--mischka {
   background: #a6a9af;
 }
 
-.ukit-colorlist li i.ukit-color--heather {
+.uk-colorlist li i.uk-color--heather {
   background: #bcbfc2;
 }
 
-.ukit-colorlist li i.ukit-color--zumthor {
+.uk-colorlist li i.uk-color--zumthor {
   background: #d2d4d6;
 }
 
-.ukit-colorlist li i.ukit-color--zirkon {
+.uk-colorlist li i.uk-color--zirkon {
   background: #e9eaeb;
 }
 
-.ukit-colorlist li i.ukit-color--dpgreen {
+.uk-colorlist li i.uk-color--dpgreen {
   background: #00c853;
 }
 
-.ukit-colorlist li i.ukit-color--rorange {
+.uk-colorlist li i.uk-color--rorange {
   background: #f44336;
+}
+
+.uk-type__class {
+  display: flex;
+  align-items: center;
+}
+
+.uk-type__class pre {
+  margin: 0 0 0 10px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.uk-typoglist {
+  margin: 0;
+  max-width: 550px;
+}
+
+.uk-typoglist li {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.uk-typoglist li > div {
+  margin-left: 20px;
+  flex-basis: 40%;
+}
+
+.uk-typoglist li i {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  display: block;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.uk-typoglist li p {
+  margin: 0;
 }
 
 :root {
@@ -561,94 +607,165 @@ input[type='radio']:checked::before {
           transform: scale(1);
 }
 
-.ukit-color--rpurp {
+/* COLORS */
+.uk-color--rpurp {
   color: #6749af !important;
 }
 
-.ukit-color--midblue {
+.uk-color--midblue {
   color: #310a7f !important;
 }
 
-.ukit-color--evour {
+.uk-color--evour {
   color: #441e92 !important;
 }
 
-.ukit-color--fsblue {
+.uk-color--fsblue {
   color: #58389f !important;
 }
 
-.ukit-color--fsblue2 {
+.uk-color--fsblue2 {
   color: #6e52ab !important;
 }
 
-.ukit-color--rblue {
+.uk-color--rblue {
   color: #826ab7 !important;
 }
 
-.ukit-color--cornblue {
+.uk-color--cornblue {
   color: #9784c4 !important;
 }
 
-.ukit-color--skyblue {
+.uk-color--skyblue {
   color: #c0b5dc !important;
 }
 
-.ukit-color--lavender {
+.uk-color--lavender {
   color: #d6cee7 !important;
 }
 
-.ukit-color--aliceblue {
+.uk-color--aliceblue {
   color: #eae7f3 !important;
 }
 
-.ukit-color--midexp {
+.uk-color--midexp {
   color: #202834 !important;
 }
 
-.ukit-color--manatee {
+.uk-color--manatee {
   color: #90949b !important;
 }
 
-.ukit-color--arsenic {
+.uk-color--arsenic {
   color: #363e49 !important;
 }
 
-.ukit-color--fiord {
+.uk-color--fiord {
   color: #4d535e !important;
 }
 
-.ukit-color--shutgrey {
+.uk-color--shutgrey {
   color: #636972 !important;
 }
 
-.ukit-color--stormgrey {
+.uk-color--stormgrey {
   color: #797e86 !important;
 }
 
-.ukit-color--manatee {
+.uk-color--manatee {
   color: #90949b !important;
 }
 
-.ukit-color--mischka {
+.uk-color--mischka {
   color: #a6a9af !important;
 }
 
-.ukit-color--heather {
+.uk-color--heather {
   color: #bcbfc2 !important;
 }
 
-.ukit-color--zumthor {
+.uk-color--zumthor {
   color: #d2d4d6 !important;
 }
 
-.ukit-color--zirkon {
+.uk-color--zirkon {
   color: #e9eaeb !important;
 }
 
-.ukit-color--dpgreen {
+.uk-color--dpgreen {
   color: #00c853 !important;
 }
 
-.ukit-color--rorange {
+.uk-color--rorange {
   color: #f44336 !important;
+}
+
+/* TYPOGRAPHY */
+.uk-h1 {
+  font-size: 48px !important;
+  font-weight: normal !important;
+  color: #000;
+  margin: 0 0 20px 0 !important;
+}
+
+.uk-h2 {
+  font-size: 34px !important;
+  font-weight: normal !important;
+  letter-spacing: 0.25px;
+  color: #000;
+  margin: 0 0 20px 0 !important;
+}
+
+.uk-h3 {
+  font-size: 24px !important;
+  font-weight: normal !important;
+  color: #000;
+  margin: 0 0 15px 0 !important;
+}
+
+.uk-h4 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.25px;
+  color: #000;
+  margin: 0 0 10px 0 !important;
+}
+
+.uk-txt1 {
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.uk-txt2 {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.15px;
+}
+
+.uk-txt3 {
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+.uk-txt4 {
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
+
+.uk-txt5 {
+  font-weight: normal !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px;
+}
+
+.uk-txt6 {
+  font-weight: normal !important;
+  font-size: 12px !important;
+  letter-spacing: 1.5px;
+}
+
+.uk-txt7 {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5px;
 }
