@@ -96,3 +96,55 @@
             font-weight: 500!important
             font-size: 14px!important
             letter-spacing: 0.5px
+
+/* Buttons */
+.uk-btn
+    background: #6749af!important
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    padding: 11px 30px
+    line-height: 1.3
+    text-transform: uppercase
+    min-width: 140px
+    font-family: 'Roboto', sans-serif
+    font-size: 14px
+    font-weight: 500
+    font-style: normal
+    letter-spacing: 0.5px
+    text-align: center
+    color: #ffffff!important
+    text-decoration: none!important
+    cursor: pointer
+    border-radius: 4px
+    user-select: none
+    transition: background 0.3s, color 0.3s
+    &:hover
+        background: #5A3EA4!important
+        color: #fff!important
+    &:active
+        background: #4E3499!important
+        color: #fff!important
+    i
+        margin-right: 8px
+        font-size: 16px
+    &--light
+        background: #f4f2f9!important
+        color: #6749af!important
+    &--outline
+        background: #fff!important
+        color: #6749af!important
+        border: solid 1px #6749af!important
+    &[disabled],
+    &--disabled
+        background: #e9eaeb!important
+        color: #bcbfc2!important
+        border-color: #e9eaeb!important
+        cursor: default
+        filter: grayscale(1)
+        &:hover,
+        &:active
+            background: #e9eaeb!important
+            color: #bcbfc2!important
+            cursor: default
+            filter: grayscale(1)

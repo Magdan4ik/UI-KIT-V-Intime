@@ -111,17 +111,20 @@ body, html
         transition: 0.4s width cubic-bezier(0.37,0.62,0.47,0.72)
     &-section
         color: #000
-        padding: 75px 0
         width: 100%
         max-width: 80%
-        margin: 0 auto
+        margin: 75px auto
         border-bottom: 1px solid #eee
         font-family: "Roboto"
         &__title
+            position: sticky
+            top: 9px
+            max-width: 350px
             margin-bottom: 45px
             font-weight: 900
             font-size: 36px
             color: #000
+            z-index: 3
             text-transform: uppercase
         &__article
             &:not(:last-of-type)
@@ -215,12 +218,66 @@ body, html
             > div
                 margin-left: 20px
                 flex-basis: 40%
-            i
-                width: 70px
-                height: 70px
-                margin-right: 15px
-                display: block
-                border-radius: 50%
-                flex-shrink: 0
+    &-fields
+        margin: 0
+        display: flex
+        flex-wrap: wrap
+        li
+            margin: 20px
+            flex-basis: calc(25% - 40px)
+            max-width: 350px
+            flex-grow: 1
+            &.uk-code--opened
+                .uk-field__markup
+                    display: block
             p
-                margin: 0
+                margin: 0 0 20px 0
+                color: #999
+                font-size: 12px
+        &__info
+            display: flex
+        &--buttons
+            .uk-btn[hover]
+                background: #5A3EA4!important
+                color: #fff!important
+            .uk-btn[active]
+                background: #4E3499!important
+                color: #fff!important
+    &-field
+        &__info
+            display: flex
+            justify-content: space-between
+            max-width: 240px
+        &__code
+            flex-shrink: 0
+            span
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 30px
+                height: 20px
+                border: 2px solid #d8d8d8
+                border-radius: 2px
+                font-size: 0
+                cursor: pointer
+                &::before,
+                &::after
+                    content: ""
+                    border: solid #d8d8d8
+                    border-width: 0 2px 2px 0
+                    display: inline-block
+                    padding: 3px
+                &::before
+                    transform: rotate(135deg)
+                &::after
+                    transform: rotate(-45deg)
+        &__markup
+            display: none
+            width: 100%
+            background: #f5f2f0
+            padding: 10px
+            margin: 10px 0 0 0
+            overflow-y: auto
+            min-height: 50px
+            font-size: 13px
+            text-align: left

@@ -19,8 +19,17 @@ document.querySelectorAll('.uk-header__breakpoint-link').forEach(link => {
 //Aside links
 document.querySelectorAll('.uk-aside__list-item a').forEach(link => {
     link.addEventListener('click', e => {
-        document.querySelectorAll('.uk-aside__list-item a').forEach(link => link.classList.remove('active'));
         e.preventDefault();
+        document.querySelectorAll('.uk-aside__list-item a').forEach(link => link.classList.remove('active'));
         link.classList.add('active');
+    });
+});
+
+
+//Toggle markup code
+document.querySelectorAll('.uk-field__code').forEach(code => {
+    code.addEventListener('click', e => {
+        e.preventDefault();
+        code.closest('li').classList.toggle('uk-code--opened')
     });
 });
