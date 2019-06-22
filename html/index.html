@@ -13,6 +13,7 @@
     <script type="text/javascript" src="https://v-intime.com.ua/catalog/view/theme/fastfood/js/custom.js?v3"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="../js/helper.js" defer></script>
+    <script type="text/javascript" src="https://v-intime.com.ua/catalog/view/theme/fastfood/js/jquery.maskedinput.min.js"></script>
     <link rel="stylesheet" href="../css/main.css"> <!-- UI Kit Styles-->
     <script src="../js/common.js" defer></script> <!-- UI Kit Scripts-->
 </head>
@@ -587,233 +588,320 @@
     </article>
 </section>
         <section class="uk-section" id="inputs">
-    <h2 class="uk-section__title">Buttons</h2>
+    <h2 class="uk-section__title">Inputs</h2>
     <article class="uk-section__article">
-        <h3>default primary button</h3>
+        <h3>simple text field</h3>
         <ul class="uk-fields uk-fields--inputs">
             <li>
                 <div class="uk-field__info">
                     <p>NORMAL</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn">Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
-            </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>MOUSE OVER</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn" hover>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
+                <input type="text" class="uk-input" placeholder="Example: Some text" required>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input" placeholder="Example: Some text" required><span class="uk-input__texterror">Пожалуйста, проверьте поле</span></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>ACTIVE</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" active>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
+                <input type="text" class="uk-input" placeholder="" focus>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input" placeholder="Example: Some text"></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>DISABLED</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" disabled>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn" disabled>Button</button></textarea>
-                <textarea class="uk-field__markup"><a class="uk-btn uk-btn--disabled">Button</a></textarea>
+                <input type="text" class="uk-input" placeholder="Some text" disabled>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input" placeholder="Some text" disabled></textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>VALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <input type="text" class="uk-input" placeholder="Some text" value="Some text" valid>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input" placeholder="Some text" required></textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>INVALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <input type="text" class="uk-input" placeholder="Some text" value="Some text" invalid>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input" placeholder="Some text" required><span class="uk-input__texterror">Пожалуйста, проверьте поле</span></textarea>
             </li>
         </ul>
     </article>
     <article class="uk-section__article">
-        <h3>primaty button with icon</h3>
+        <h3>DROPLIST</h3>
         <ul class="uk-fields uk-fields--buttons">
             <li>
                 <div class="uk-field__info">
                     <p>NORMAL</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
+                <select class="uk-select" required>
+                    <option value="Item 1">Item 1</option>
+                    <option value="Item 2">Item 2</option>
+                    <option value="Item 3">Item 3</option>
+                    <option value="Item 4">Item 5</option>
+                </select>
+                <textarea class="uk-field__markup">
+                    <select class="uk-select">
+                        <option value="Item 1">Item 1</option>
+                        <option value="Item 2">Item 2</option>
+                        <option value="Item 3">Item 3</option>
+                        <option value="Item 4">Item 5</option>
+                    </select>
+                </textarea>
             </li>
             <li>
                 <div class="uk-field__info">
-                    <p>MOUSE OVER</p>
+                    <p>ERROR</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" hover><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
+                <select class="uk-select" required>
+                    <option value="Item 1">Item 1</option>
+                    <option value="Item 2">Item 2</option>
+                    <option value="Item 3">Item 3</option>
+                    <option value="Item 4">Item 5</option>
+                </select>
+                <textarea class="uk-field__markup">
+                    <select class="uk-select">
+                        <option value="Item 1">Item 1</option>
+                        <option value="Item 2">Item 2</option>
+                        <option value="Item 3">Item 3</option>
+                        <option value="Item 4">Item 5</option>
+                    </select>
+                </textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>VALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <select class="uk-select" required>
+                    <option value="Item 1">Item 1</option>
+                    <option value="Item 2">Item 2</option>
+                    <option value="Item 3">Item 3</option>
+                    <option value="Item 4">Item 5</option>
+                </select>
+                <textarea class="uk-field__markup">
+                    <select class="uk-select">
+                        <option value="Item 1">Item 1</option>
+                        <option value="Item 2">Item 2</option>
+                        <option value="Item 3">Item 3</option>
+                        <option value="Item 4">Item 5</option>
+                    </select>
+                </textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>ACTIVE</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" active><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
-            </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>DISABLED</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn" disabled><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn" disabled><i class="fa fa-play-circle"></i>Button</button></textarea>
-                <textarea class="uk-field__markup"><a class="uk-btn uk-btn--disabled">Button</a></textarea>
+                <select class="uk-select uk-select--active" required>
+                    <option value="Item 1">Item 1</option>
+                    <option value="Item 2">Item 2</option>
+                </select>
+                <textarea class="uk-field__markup">
+                    <select class="uk-select">
+                        <option value="Item 1">Item 1</option>
+                        <option value="Item 2">Item 2</option>
+                    </select>
+                </textarea>
             </li>
         </ul>
     </article>
     <article class="uk-section__article">
-        <h3>secondary default button</h3>
-        <ul class="uk-fields uk-fields--buttons">
+        <h3>Phone field</h3>
+        <ul class="uk-fields uk-fields--inputs">
             <li>
                 <div class="uk-field__info">
                     <p>NORMAL</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn uk-btn--light">Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn--light">Button</button></textarea>
-            </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>MOUSE OVER</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn" hover>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
+                <input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" required>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span>
+                <textarea class="uk-field__markup"><input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" required><span class="uk-input__texterror">Пожалуйста, проверьте поле</span></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>ACTIVE</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" active>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
+                <input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" focus>
+                <textarea class="uk-field__markup"><input type="tel" class="uk-input" placeholder="+38(999)-999-99-99"></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>DISABLED</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" disabled>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn" disabled>Button</button></textarea>
-                <textarea class="uk-field__markup"><a class="uk-btn uk-btn--disabled">Button</a></textarea>
+                <input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" disabled>
+                <textarea class="uk-field__markup"><input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" disabled></textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>VALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" valid>
+                <textarea class="uk-field__markup"><input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" required></textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>INVALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" invalid>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span>
+                <textarea class="uk-field__markup"><input type="tel" class="uk-input" placeholder="+38(999)-999-99-99" required><span class="uk-input__texterror">Пожалуйста, проверьте поле</span></textarea>
             </li>
         </ul>
     </article>
     <article class="uk-section__article">
-        <h3>secondary button with icon</h3>
-        <ul class="uk-fields uk-fields--buttons">
+        <h3>text area field</h3>
+        <ul class="uk-fields uk-fields--inputs">
             <li>
                 <div class="uk-field__info">
                     <p>NORMAL</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn uk-btn--light"><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn uk-btn--light"><i class="fa fa-play-circle"></i>Button</button></textarea>
-            </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>MOUSE OVER</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn" hover><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
+                <textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text" required></textarea>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span>
+                <textarea class="uk-field__markup"><textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text" required></textarea>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>ACTIVE</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" active><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
+                <textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text" focus required></textarea>
+                <textarea class="uk-field__markup"><textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text" required></textarea></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>DISABLED</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" disabled><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn" disabled><i class="fa fa-play-circle"></i>Button</button></textarea>
-                <textarea class="uk-field__markup"><a class="uk-btn uk-btn--disabled">Button</a></textarea>
+                <textarea class="uk-input" placeholder="Example: Some text" disabled readonly></textarea>
+                <textarea class="uk-field__markup"><textarea class="uk-input" placeholder="Example: Some text" disabled readonly></textarea></textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>VALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text" focus valid></textarea>
+                <textarea class="uk-field__markup"><textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text"></textarea></textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>INVALID</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text" focus invalid></textarea>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span>
+                <textarea class="uk-field__markup"><textarea class="uk-input" onkeyup="autoHeight(this)" placeholder="Example: Some text"></textarea>
+                <span class="uk-input__texterror">Пожалуйста, проверьте поле</span></textarea>
             </li>
         </ul>
     </article>
     <article class="uk-section__article">
-        <h3>outline default button</h3>
-        <ul class="uk-fields uk-fields--buttons">
+        <h3>Without placeholder</h3>
+        <ul class="uk-fields uk-fields--inputs">
             <li>
                 <div class="uk-field__info">
                     <p>NORMAL</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn uk-btn--outline">Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn--outline">Button</button></textarea>
-            </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>MOUSE OVER</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn" hover>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
+                <input type="text" class="uk-input" value="7894 грн">
+                <textarea class="uk-field__markup"><input type="text" class="uk-input"></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>ACTIVE</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" active>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn">Button</button></textarea>
+                <input type="text" class="uk-input" value="7894 грн" focus>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input"></textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>DISABLED</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" disabled>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn" disabled>Button</button></textarea>
-                <textarea class="uk-field__markup"><a class="uk-btn uk-btn--disabled">Button</a></textarea>
+                <input type="text" class="uk-input" value="7894 грн" disabled>
+                <textarea class="uk-field__markup"><input type="text" class="uk-input" disabled></textarea>
             </li>
+            <li></li>
+            <li></li>
         </ul>
     </article>
     <article class="uk-section__article">
-        <h3>outline button with icon</h3>
-        <ul class="uk-fields uk-fields--buttons">
+        <h3>Search Fields</h3>
+        <ul class="uk-fields uk-fields--inputs">
             <li>
                 <div class="uk-field__info">
                     <p>NORMAL</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn uk-btn--outline"><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn uk-btn--outline"><i class="fa fa-play-circle"></i>Button</button></textarea>
-            </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>MOUSE OVER</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn" hover><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
+                <form action="?">
+                    <div class="uk-input__search">
+                        <div class="uk-input__searchfield">
+                            <input type="search" class="uk-input" placeholder="Search">
+                            <span class="uk-input__textinfo">Например: <i>кляп</i>, <i>вибратор</i>…</span> 
+                        </div>
+                        <button type="submit" class="uk-input__search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+                <textarea class="uk-field__markup">
+                    <form action="?">
+                        <div class="uk-input__search">
+                            <div class="uk-input__searchfield">
+                                <input type="search" class="uk-input" placeholder="Search">
+                                <span class="uk-input__textinfo">Например: <i>кляп</i>, <i>вибратор</i>…</span> 
+                            </div>
+                            <button type="submit" class="uk-input__search-btn"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </textarea>
             </li>
             <li>
                 <div class="uk-field__info">
                     <p>ACTIVE</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
-                <button type="button" class="uk-btn" active><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn"><i class="fa fa-play-circle"></i>Button</button></textarea>
+                <form action="?">
+                    <div class="uk-input__search">
+                        <div class="uk-input__searchfield">
+                            <input type="search" class="uk-input" placeholder="Search" focus>
+                            <span class="uk-input__textinfo">Например: <i>кляп</i>, <i>вибратор</i>…</span> 
+                        </div>
+                        <button type="submit" class="uk-input__search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+                <textarea class="uk-field__markup">
+                    <form action="?">
+                        <div class="uk-input__search">
+                            <div class="uk-input__searchfield">
+                                <input type="search" class="uk-input" placeholder="Search">
+                                <span class="uk-input__textinfo">Например: <i>кляп</i>, <i>вибратор</i>…</span> 
+                            </div>
+                            <button type="submit" class="uk-input__search-btn"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </textarea>
             </li>
-            <li>
-                <div class="uk-field__info">
-                    <p>DISABLED</p>
-                    <div class="uk-field__code"><span>Code</span></div>
-                </div>
-                <button type="button" class="uk-btn uk-btn" disabled><i class="fa fa-play-circle"></i>Button</button>
-                <textarea class="uk-field__markup"><button type="button" class="uk-btn" disabled><i class="fa fa-play-circle"></i>Button</button></textarea>
-                <textarea class="uk-field__markup"><a class="uk-btn uk-btn--disabled">Button</a></textarea>
-            </li>
+           <li></li>
+           <li></li>
+           <li></li>
         </ul>
     </article>
 </section>

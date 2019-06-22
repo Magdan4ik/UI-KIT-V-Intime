@@ -115,6 +115,8 @@
     text-align: center
     color: #ffffff!important
     text-decoration: none!important
+    outline: none!important
+    border: none !important
     cursor: pointer
     border-radius: 4px
     user-select: none
@@ -148,3 +150,225 @@
             color: #bcbfc2!important
             cursor: default
             filter: grayscale(1)
+
+/* INPUTS*/
+.uk-input
+    &__texterror
+        display: none
+        color: #f44336
+        font-size: 12px
+    &__textinfo
+        font-size: 12px
+        color: #90949b
+        i
+            font-style: normal
+            cursor: pointer
+
+input,
+textarea,
+select
+    &.uk-input
+        background: #fff
+        width: 100%
+        display: block
+        padding: 11px 12px
+        min-height: 40px
+        margin: 0
+        font-size: 14px
+        font-family: "Roboto", sans-serif
+        font-weight: normal
+        line-height: normal
+        border: none
+        outline: none!important
+        color: #333
+        border-radius: 4px
+        border: solid 1px #d2d4d6
+        box-shadow: none
+        transition: 0.3s border
+        &::placeholder
+            color: #CFDDE2
+            opacity: 1
+            transition: 0.3s all
+textarea
+    &.uk-input
+        resize: vertical
+        max-height: 200px
+        min-height: 40px
+        height: 40px
+
+input[type='radio'],
+input[type='checkbox'],
+select
+    &.uk-input
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        border-radius: 0
+        cursor: pointer
+
+.uk-input
+    &:focus
+        border-color: #5634a5
+        &::placeholder
+            transform: translateX(9px)
+            opacity: 0
+    &:required:valid
+        background: #fff url('../img/icons/check/green.svg') no-repeat calc(100% - 10px) center/18px !important
+        border-color: #00c853
+        padding-right: 35px !important
+    &.uk-input--touched:required:invalid
+        background: #fff url('../img/icons/warning/red.svg') no-repeat calc(100% - 10px) center/18px !important
+        padding-right: 35px !important
+        border-color: #f44336
+        & + .uk-input__texterror
+            display: block
+    &[disabled]
+        background: #e9eaeb url('../img/icons/block/grey.svg') no-repeat calc(100% - 10px) center/18px !important
+        padding-right: 35px !important
+        color: #90949b !important
+        border-color: #e9eaeb !important
+        cursor: default
+        filter: grayscale(1)
+    &[type='search']
+        border-radius: 4px 0 0 4px
+        border-right: none
+    &[type='checkbox'],
+    &[type='radio']
+        background: #fff
+        position: relative
+        width: 16px
+        height: 16px
+        border: none
+        padding: 0
+        cursor: pointer
+        width: 18px
+        height: 18px
+        border: 2px solid #000
+        transition: 0.2s
+
+    &[type='checkbox']
+        border-radius: 2px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 4px
+            width: 6px
+            height: 12px
+            border: 2px solid #fff
+            border-top-width: 0
+            border-left-width: 0
+            transform: rotate(45deg) scale(0)
+            transition: 0.2s
+        &:checked
+            background-color: var(--main-color)
+            border-color: var(--main-color)
+            &::before
+                transform: rotate(45deg) scale(1)
+
+    &[type='radio']
+        border-radius: 50%
+        &::before
+            content: ""
+            background-color: var(--main-color)
+            position: absolute
+            top: 3px
+            left: 3px
+            border: none
+            width: 8px
+            height: 8px
+            border-radius: inherit
+            transform: scale(0)
+            transition: 0.2s
+        &:checked
+            border-color: var(--main-color)
+            background-color: #fff
+            &::before
+                transform: scale(1)
+    &__search
+        display: flex
+        align-items: flex-start
+        &-btn
+            background: #5634a5
+            color: #fff
+            border: none
+            outline: none
+            height: 41px
+            width: 41px
+            border-radius: 0 4px 4px 0
+            flex-shrink: 0
+    &__searchfield
+        width: 100%
+
+
+/* SELECT */
+.uk-select
+    visibility: hidden
+    opacity: 0
+    clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px)
+    position: absolute
+    left: -99999px
+    top: -99999px
+    &__wrap
+        position: relative
+    &__val
+        background: #fff url(../img/icons/arrow/bot.svg) no-repeat calc(100% - 10px) center/18px
+        position: relative
+        display: flex
+        align-items: center
+        padding: 8px 12px
+        font-size: 14px
+        color: #90949b
+        line-height: 2
+        max-height: 40px
+        overflow: hidden
+        border: solid 1px #d2d4d6
+        border-radius: 4px
+        z-index: 10000
+        cursor: pointer
+        user-select: none
+        &--active
+            background-image: url(../img/icons/arrow/top.svg)
+            border-color:  rgba(87, 53, 167, 0.5)
+            border-width: 2px
+            color: #333333
+            + .uk-select__options
+                visibility: visible
+                opacity: 1
+                transform: scale(1)
+                border-color: rgba(87, 53, 167, 0.5)
+                border-width: 2px
+    &__options
+        visibility: hidden
+        opacity: 0
+        overflow-y: auto
+        position: absolute
+        top: 100%
+        right: 0
+        left: 0
+        z-index: 9999
+        margin: 0
+        padding: 0
+        margin-top: -3px
+        list-style: none
+        border-radius: 0 0 4px 4px
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.1)
+        border: solid 1px #d2d4d6
+        background-color: #ffffff
+        transform: scaleY(0)
+        transform-origin: top
+        will-change: transform,opacity
+        transition: transform .2s
+        li
+            font-size: 14px
+            margin: 0
+            padding: 12px
+            padding-right: 36px
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                background-color: rgba(87, 53, 167, 0.05)
+                color: #5634a5
+    &__li--active
+        background-color: rgba(87, 53, 167, 0.05)
+        color: #5634a5

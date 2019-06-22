@@ -1,5 +1,4 @@
-body, html
-    height: auto!important
+
 .uk
     &-main
         display: flex
@@ -7,7 +6,7 @@ body, html
     &-content
         position: relative
         width: 100%
-        padding-left: 250px
+        margin-left: 250px
         flex-grow: 1
         background: #f3f3f3
     
@@ -114,6 +113,7 @@ body, html
         width: 100%
         max-width: 80%
         margin: 75px auto
+        padding-bottom: 75px
         border-bottom: 1px solid #eee
         font-family: "Roboto"
         &__title
@@ -222,7 +222,7 @@ body, html
         margin: 0
         display: flex
         flex-wrap: wrap
-        li
+        > li
             margin: 20px
             flex-basis: calc(25% - 40px)
             max-width: 350px
@@ -243,6 +243,22 @@ body, html
             .uk-btn[active]
                 background: #4E3499!important
                 color: #fff!important
+        &--inputs
+            li
+                flex-basis: calc(20% - 40px)
+            .uk-input
+                &[focus]
+                    border-color: #5634a5
+                &[valid]
+                    background: #fff url('../img/icons/check/green.svg') no-repeat calc(100% - 10px) center/18px !important
+                    border-color: #00c853
+                    padding-right: 35px !important
+                &[invalid]
+                    background: #fff url('../img/icons/warning/red.svg') no-repeat calc(100% - 10px) center/18px !important
+                    padding-right: 35px !important
+                    border-color: #f44336
+                    & + .uk-input__texterror
+                        display: block
     &-field
         &__info
             display: flex
