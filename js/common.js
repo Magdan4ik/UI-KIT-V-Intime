@@ -76,16 +76,14 @@ function initUiKit() {
 		});
 	});
 
-
 	customSelect();
 	plusMinusAmount();
-	
-}
+};
+
 
 function autoHeight(el) {
 	el.style.height = (el.scrollHeight) + "px";
 };
-
 
 function customSelect() {
 
@@ -136,7 +134,6 @@ function customSelect() {
 	
 	});
 };
-
 
 function plusMinusAmount() {
 	String.prototype.getDecimals || (String.prototype.getDecimals = function() {

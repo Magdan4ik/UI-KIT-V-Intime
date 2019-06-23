@@ -705,6 +705,39 @@ select
     &__content
         padding: 20px 30px
 
+/* BREADCRUMBS */
+.uk-breadcrumbs
+    margin-bottom: 20px
+    &__list
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin: 0 
+        padding: 0
+        list-style: none
+    &__item
+        color: #90949b
+        font-size: 12px
+        &:last-of-type,
+        &--current
+            color: #5634a5
+        &:not(:last-of-type)
+            &::after
+                content: ""
+                width: 4px
+                height: 4px
+                margin: 5px
+                border-radius: 50%
+                background: #bcbfc2
+                display: inline-block
+                vertical-align: middle
+        a
+            color: #90949b
+            font-size: 12px
+            transition: 0.3s
+            &:hover
+                color: #5634a5
+
 /* Popup animation*/
 @keyframes OpenPopup
     from
