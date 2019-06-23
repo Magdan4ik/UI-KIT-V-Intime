@@ -57,7 +57,7 @@
         top: 0
         left: 250px
         right: 0
-        z-index: 2
+        z-index: 999998
         border-bottom: 1px solid #eee
         font-family: 'Roboto', sans-serif
         &__inner
@@ -124,7 +124,7 @@
             font-weight: 900
             font-size: 36px
             color: #000
-            z-index: 3
+            z-index: 999999
             text-transform: uppercase
         &__article
             &:not(:last-of-type)
@@ -226,6 +226,7 @@
             margin: 20px
             flex-basis: calc(25% - 40px)
             max-width: 350px
+            min-width: 250px
             flex-grow: 1
             &.uk-code--opened
                 .uk-field__markup
@@ -259,6 +260,12 @@
                     border-color: #f44336
                     & + .uk-input__texterror
                         display: block
+        &--other
+            li
+                flex-basis: calc(20% - 40px)
+            .uk-input__label--error input
+                border-color: #f44336 !important
+            
     &-field
         &__info
             display: flex

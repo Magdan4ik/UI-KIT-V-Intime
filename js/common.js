@@ -11,17 +11,30 @@ function initUiKit() {
 		});
 	});
 
-	document.querySelectorAll('.uk-input__search .uk-input__textinfo i').forEach(el => {
-		el.addEventListener('click', e => {
-			el.closest('.uk-input__search').querySelector('input[type="search"]').value = el.textContent;
+	document.querySelectorAll(':required').forEach(el => {
+		if(el.type == "radio" || el.type == "checkbox") {
+			el.addEventListener('click', () => {
+				el.classList.add('uk-input--clicked');
+				el.parentElement.classList.remove('uk-input__label--error');
+				if(!el.checked) {
+					el.parentElement.classList.add('uk-input__label--error');
+				}
+			});
+		} else {
+			el.addEventListener('keyup', () => {
+				el.classList.add('uk-input--touched')
+			});
+		}
+	});
+
+	document.querySelectorAll('.uk-tabs__btn').forEach(btn => {
+		btn.addEventListener('click', e => {
+			e.preventDefault();
+			document.querySelectorAll('.uk-tabs__btn').forEach(btn => btn.classList.remove('uk-tabs__btn--active'));
+			btn.classList.add('uk-tabs__btn--active');
 		});
 	});
 
-	document.querySelectorAll(':required').forEach(el => {
-		el.addEventListener('keyup', () => {
-			el.classList.add('uk-input--touched')
-		});
-	});
 
 	customSelect();
 	
