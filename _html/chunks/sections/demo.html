@@ -1,0 +1,75 @@
+<section class="uk-section" id="demo">
+    <h2 class="uk-section__title">DEMO</h2>
+    <article class="uk-section__article">
+        <h3>MODAL WINDOW</h3>
+        <ul class="uk-fields uk-fields--demo">
+            <li>
+                <button type="button" class="uk-btn" data-popup="popup-registration"> OPEN POPUP</button>
+            </li>
+            <li>
+                <button type="button" class="uk-btn" data-popup="popup-two"> OPEN POPUP 2</button>
+            </li>
+        </ul>
+    </article>
+</section>
+
+<div class="uk-popup" id="popup-two">
+    <div class="uk-popup__inner">
+        <div class="uk-popup__close"></div>
+        <div class="uk-popup__head">
+            <div class="uk-popup__head-title">POPUP 2 TITLE</div>
+        </div>
+        <div class="uk-popup__content">
+            POPUP 2 CONTENT
+        </div>
+    </div>
+</div>
+
+<div class="uk-popup" id="popup-registration">
+	<div class="uk-popup__inner">
+		<div class="uk-popup__close"></div>
+        <div class="uk-popup__head">
+            <div class="uk-popup__head-title">Регистрация</div>
+        </div>
+        <div class="uk-popup__content">
+            <form action="?">
+                <label class="uk-input__row">
+                    <p>Имя</p>
+                    <input type="text" class="uk-input" placeholder="Введите имя" required autofocus>
+                </label>
+                <label class="uk-input__row">
+                    <p>Электорнный адрес</p>
+                    <input type="email" class="uk-input" placeholder="Введите email" value="vladd0193@gmail.com" required>
+                </label>
+                <label class="uk-input__row">
+                    <p>Номер телефона</p>
+                    <input type="tel" class="uk-input" placeholder="Введите моб. номер" required>
+                    <span class="uk-input__textinfo">Должен содержать не менее 8 символов</span>
+                </label>
+                <label class="uk-input__row">
+                    <p>Пароль</p>
+                    <div class="uk-input__password">
+                        <input type="password" class="uk-input" placeholder="Введите пароль" required>
+                        <i class="uk-input__password-view"></i>
+                    </div>
+                </label>
+                <label class="uk-input__row">
+                    <p>Подтвердите пароль</p>
+                    <div class="uk-input__password">
+                        <input type="password" class="uk-input" placeholder="Подтвердите пароль" required>
+                        <i class="uk-input__password-view"></i>
+                    </div>
+                </label>
+                <div class="uk-input__row">
+                    <label class="uk-input__label">
+                        <input type="checkbox" class="uk-input--cb" required>
+                        <span>Я принимаю условия <a>Публичной оферты и Пользовательского соглашения</a></span>
+                    </label>
+                </div>
+                <div class="uk-input__row">
+                   <button type="submit" class="uk-btn uk-btn--full">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+	</div>
+</div>

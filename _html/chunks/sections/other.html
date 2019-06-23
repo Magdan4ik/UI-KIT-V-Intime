@@ -250,17 +250,196 @@
         <ul class="uk-fields uk-fields--other">
             <li>
                 <div class="uk-field__info">
-                    <p>active / normal</p>
+                    <p>Active / Normal</p>
                     <div class="uk-field__code"><span>Code</span></div>
                 </div>
                 <div class="uk-tabs">
                     <div class="uk-tabs__btns">
-                        <button class="uk-tabs__btn uk-tabs__btn--active">BUTTON</button>
-                        <button class="uk-tabs__btn">BUTTON</button>
+                        <button class="uk-tabs__btn uk-tabs__btn--active" type="button">BUTTON</button>
+                        <button class="uk-tabs__btn" type="button">BUTTON</button>
                     </div>
                 </div>
                 <textarea class="uk-field__markup">
-
+                    <div class="uk-tabs">
+                        <div class="uk-tabs__btns">
+                            <button class="uk-tabs__btn uk-tabs__btn--active" type="button">BUTTON</button>
+                            <button class="uk-tabs__btn" type="button">BUTTON</button>
+                        </div>
+                    </div>
+                </textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>Active / Hover</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-tabs">
+                    <div class="uk-tabs__btns">
+                        <button class="uk-tabs__btn uk-tabs__btn--active" type="button">BUTTON</button>
+                        <button class="uk-tabs__btn" style="color:#5634a5" type="button">BUTTON</button>
+                    </div>
+                </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-tabs">
+                        <div class="uk-tabs__btns">
+                            <button class="uk-tabs__btn uk-tabs__btn--active" type="button">BUTTON</button>
+                            <button class="uk-tabs__btn" type="button">BUTTON</button>
+                        </div>
+                    </div>
+                </textarea>
+            </li>
+        </ul>
+    </article>
+    <article class="uk-section__article">
+        <h3>enter amount</h3>
+        <ul class="uk-fields uk-fields--other">
+            <li>
+                <div class="uk-field__info">
+                    <p>NORMAL</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-amount">
+                    <div class="uk-amount__btns">
+                        <button type="button" class="uk-amount__btn uk-amount__btn--minus">-</button>
+                        <input type="number" step="1" min="1" max="5" name="quantity" value="1" class="uk-amount__input" size="4">
+                        <button type="button" class="uk-amount__btn uk-amount__btn--plus">+</button>
+                    </div>
+                 </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-amount">
+                        <div class="uk-amount__btns">
+                            <button type="button" class="uk-amount__btn uk-amount__btn--minus">-</button>
+                            <input type="number" step="1" min="1" max="5" name="quantity" value="1" class="uk-amount__input" size="4">
+                            <button type="button" class="uk-amount__btn uk-amount__btn--plus">+</button>
+                        </div>
+                    </div>
+                </textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>MORE THAN 2</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-amount uk-amount--more">
+                    <div class="uk-amount__btns">
+                        <button type="button" class="uk-amount__btn uk-amount__btn--minus">-</button>
+                        <input type="number" step="1" min="1" max="5" name="quantity" value="2" class="uk-amount__input" size="4">
+                        <button type="button" class="uk-amount__btn uk-amount__btn--plus">+</button>
+                    </div>
+                    </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-amount uk-amount--more">
+                        <div class="uk-amount__btns">
+                            <button type="button" class="uk-amount__btn uk-amount__btn--minus">-</button>
+                            <input type="number" step="1" min="1" max="5" name="quantity" value="2" class="uk-amount__input" size="4">
+                            <button type="button" class="uk-amount__btn uk-amount__btn--plus">+</button>
+                        </div>
+                    </div>
+                </textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>ACTIVE</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-amount uk-amount--focused">
+                    <div class="uk-amount__btns">
+                        <button type="button" class="uk-amount__btn uk-amount__btn--minus">-</button>
+                        <input type="number" step="1" min="1" max="5" name="quantity" value="1" class="uk-amount__input" size="4">
+                        <button type="button" class="uk-amount__btn uk-amount__btn--plus">+</button>
+                    </div>
+                    </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-amount uk-amount--focused">
+                        <div class="uk-amount__btns">
+                            <button type="button" class="uk-amount__btn uk-amount__btn--minus">-</button>
+                            <input type="number" step="1" min="1" max="5" name="quantity" value="1" class="uk-amount__input" size="4">
+                            <button type="button" class="uk-amount__btn uk-amount__btn--plus">+</button>
+                        </div>
+                    </div>
+                </textarea>
+            </li>
+        </ul>
+    </article>
+    <article class="uk-section__article">
+        <h3>Slider controls</h3>
+        <ul class="uk-fields uk-fields--other">
+            <li>
+                <div class="uk-field__info">
+                    <p>NORMAL</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-dots">
+                    <ul class="uk-dots__list">
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                    </ul>
+                </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-dots">
+                        <ul class="uk-dots__list">
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        </ul>
+                    </div>
+                </textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>ACTIVE</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-dots">
+                    <ul class="uk-dots__list">
+                        <li class="uk-dots__item"><button class="uk-dots__btn uk-dots__btn--active">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                    </ul>
+                </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-dots">
+                        <ul class="uk-dots__list">
+                            <li class="uk-dots__item"><button class="uk-dots__btn uk-dots__btn--active">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        </ul>
+                    </div>
+                </textarea>
+            </li>
+            <li>
+                <div class="uk-field__info">
+                    <p>MOUSE OVER</p>
+                    <div class="uk-field__code"><span>Code</span></div>
+                </div>
+                <div class="uk-dots">
+                    <ul class="uk-dots__list">
+                        <li class="uk-dots__item"><button class="uk-dots__btn" style="box-shadow: inset 0 0 0 1px #5634a5; background: #fff">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                    </ul>
+                </div>
+                <textarea class="uk-field__markup">
+                    <div class="uk-dots">
+                        <ul class="uk-dots__list">
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                            <li class="uk-dots__item"><button class="uk-dots__btn">dot</button></li>
+                        </ul>
+                    </div>
                 </textarea>
             </li>
         </ul>

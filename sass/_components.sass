@@ -150,6 +150,8 @@
             color: #bcbfc2!important
             cursor: default
             filter: grayscale(1)
+    &--full
+        width: 100% !important
 
 /* INPUTS*/
 .uk-input
@@ -160,9 +162,20 @@
     &__textinfo
         font-size: 12px
         color: #90949b
+        font-weight: 400
         i
             font-style: normal
             cursor: pointer
+    &__row
+        margin-bottom: 30px
+        display: block
+        > p
+            color: #90949b
+            font-size: 12px
+            margin: 0 0 5px 0
+            font-weight: 400
+            line-height: normal
+            user-select: none
 
 input,
 textarea,
@@ -241,6 +254,8 @@ select
         font-family: 'Roboto', sans-serif
         color: #333333
         user-select: none
+        > span
+            line-height: normal
         &--error
             & + .uk-input__texterror
                 display: block
@@ -320,6 +335,21 @@ select
                 transform: scale(1)
         &:not(:disabled):hover
             border-color: #5634a5 !important
+
+/* PASSWROD */
+.uk-input
+    &__password
+        position: relative
+        input[type='password'].uk-input:required,
+        input[type='text'].uk-input:required
+            background: none !important
+        &-view
+            position: absolute
+            right: 15px
+            top: calc(50% - 7px)
+            width: 15px
+            height: 15px
+            background: url('../img/icons/eye/grey.svg') no-repeat center/contain !important
 
 /* SEARCH */
 .uk-input
@@ -496,7 +526,7 @@ select
         font-style: normal
         letter-spacing: 0.5px
         text-align: center
-        color: rgba(86, 52, 165, 0.5) !important
+        color: rgba(86, 52, 165, 0.5)
         text-decoration: none !important
         outline: none !important
         border: none !important
@@ -513,3 +543,185 @@ select
             border-radius: 4px 0 0 0
         &:last-of-type
             border-radius: 0 4px 0 0
+
+/* SLIDER DOTS */
+.uk-dots
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: 0
+        padding: 0
+        list-style: none
+    &__item
+        margin: 4px
+    &__btn
+        margin: 0
+        padding: 0
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        flex-shrink: 0
+        font-size: 0
+        border: none
+        outline: none
+        background: rgba(86, 52, 165, 0.2)
+        transform: none
+        transition: 0.3s
+        &--active
+            background: #5634a5!important
+        &:hover
+            box-shadow: inset 0 0 0 1px #5634a5
+            background: #fff
+
+/* AMOUNT BUTTONS*/
+.uk-amount
+    &--more
+        .uk-amount__btn--minus
+            background: #d2d4d6
+    &--focused
+        .uk-amount__btn
+            background: #5634a5
+        .uk-amount__input
+            border-color: #5634a5
+    &__btns
+        width: 100%
+        max-width: 120px
+        height: 32px
+        display: flex
+        align-items: center
+        text-align: center
+    &__btn
+        position: relative
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        width: 32px
+        padding: 0
+        line-height: 1
+        outline: none
+        flex-shrink: 0
+        text-align: center
+        background: #e9eaeb
+        border: none
+        color: #fff
+        font-size: 0
+        transition: 0.3s background
+        &::before,
+        &::after
+            background-color: #fff
+            position: absolute
+            top: calc(50% - 1px)
+            left: calc(50% - 6px)
+            width: 12px
+            height: 2px
+            content: ""
+        &--minus
+            border-radius: 4px 0 0 4px
+            &::after
+                display: none
+        &--plus
+            border-radius: 0 4px 4px 0
+            background: #5634a5
+            &::after
+                width: 2px
+                height: 12px
+                top: calc(50% - 6px)
+                left: calc(50% - 1px)
+
+    &__input
+        height: 100%
+        width: 100%
+        text-align: center
+        border: solid 1px #e9eaeb
+        border-left: none
+        border-right: none
+        outline: none
+        transition: 0.3s border
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            -moz-appearance: none
+            margin: 0
+
+
+/* POPUP */
+.uk-popup
+    visibility: hidden
+    opacity: 0
+    position: fixed
+    background-color: rgba(0, 0, 0, 0.2)
+    z-index: 1000000
+    left: 0
+    top: 0
+    width: 100vw
+    height: 100vh
+    overflow: auto
+    padding: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    &[data-visible='true']
+        animation: OpenPopup 0.3s both
+        visibility: visible
+        opacity: 1
+    &[data-visible='false']
+        animation: ClosePopup 0.3s both
+        visibility: hidden
+        opacity: 0
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+        background: none
+        color: #333
+        font-size: 18px
+        line-height: 1
+        padding: 0
+        margin: 0
+        outline: none
+        border: none
+        cursor: pointer
+        z-index: 3
+        &::before
+            content: '\2715'
+    &__inner
+        position: relative
+        font-size: 18px
+        width: 100%
+        max-width: 360px
+        max-height: 100%
+        overflow-y: auto
+        background-color: #fff
+        box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.3), 0 0 24px 0 rgba(0, 0, 0, 0.22)
+        border-radius: 4px
+    &__head
+        padding: 20px 30px
+        background-color: #F6F5FA
+        &-title
+            font-size: 24px
+            color: #333
+            line-height: normal
+    &__content
+        padding: 20px 30px
+
+/* Popup animation*/
+@keyframes OpenPopup
+    from
+        transform: scale(1.1)
+        opacity: 0
+
+    to
+        transform: scale(1)
+        opacity: 1
+
+@keyframes ClosePopup
+    from
+        visibility: visible;
+        transform: scale(1)
+        opacity: 1
+
+    to
+        transform: scale(1.1)
+        opacity: 0
+        visibility: hidden
