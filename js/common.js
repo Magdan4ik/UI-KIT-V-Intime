@@ -154,10 +154,11 @@ function plusMinusAmount() {
 			jQuery(this).closest(".uk-amount").removeClass("uk-amount--more");
 		}
 	});
-	$(".uk-amount__input").focus(function() {
-		$(this).closest(".uk-amount").addClass('uk-amount--focused');
-	});
-	$(".uk-amount__input").blur(function() {
-		$(this).closest(".uk-amount").removeClass('uk-amount--focused');
-	});
+	$(".uk-amount__input")
+		.focus(function() {
+			$(this).closest(".uk-amount").addClass('uk-amount--focused');
+		})
+		.blur(function() {
+			$(this).closest(".uk-amount").removeClass('uk-amount--focused');
+		});
 };
